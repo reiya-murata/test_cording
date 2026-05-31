@@ -1,0 +1,11 @@
+@use "../../global/functions" as *;
+
+@mixin contents-width($max-width: 1120) {
+  width: min(calc(100% - #{size(40)}), #{size($max-width)});
+  margin-inline: auto;
+}
+
+@mixin contents-narrow($max-width: 880) {
+  width: min(calc(100% - #{size(40)}), #{size($max-width)});
+  margin-inline: auto;
+}

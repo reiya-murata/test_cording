@@ -1,0 +1,43 @@
+<section class="pg-mlitfilter-air-quantity">
+  <div class="pg-mlitfilter-air-quantity__container">
+    {% include 'components/headings/_section_feature.html.twig' with {
+      title: '安定した風量を実現',
+      label: 'AIR QUANTITY',
+      type: 'air-quantity'
+    } only %}
+    <p class="pg-mlitfilter-air-quantity__badge">純正とほぼ変わらない性能</p>
+    <p class="pg-mlitfilter-air-quantity__text">
+      独自開発のフィルター素材は <br>
+      繊維同士が密着することなく均等に配置しており、<br>
+      安定した風量が持続することを約束します。
+    </p>
+    <div class="pg-mlitfilter-air-quantity__meter-list">
+      <figure class="pg-mlitfilter-air-quantity__meter pg-mlitfilter-air-quantity__meter--genuine">
+        <img class="pg-mlitfilter-air-quantity__meter-image pg-mlitfilter-air-quantity__meter-image--genuine" src="{{ asset('build/images/mlitfilter/air_quantity_genuine_meter_pc.png') }}" alt="" width="600" height="760" loading="lazy">
+        
+      </figure>
+      <div class="pg-mlitfilter-air-quantity__values">
+        <p class="pg-mlitfilter-air-quantity__value">
+          <span class="pg-mlitfilter-air-quantity__name">純正フィルター</span>
+          <span class="pg-mlitfilter-air-quantity__amount">
+            <span class="pg-mlitfilter-air-quantity__number">5.7</span>
+            <span class="pg-mlitfilter-air-quantity__unit">約<br>m/s</span>
+          </span>
+        </p>
+        <p class="pg-mlitfilter-air-quantity__value">
+          <span class="pg-mlitfilter-air-quantity__name--english">MLITFILTER</span>
+          <span class="pg-mlitfilter-air-quantity__amount">
+            <span class="pg-mlitfilter-air-quantity__number">5.6</span>
+            <span class="pg-mlitfilter-air-quantity__unit">約
+            <br>m/s</span>
+          </span>
+        </p>
+        <p class="pg-mlitfilter-air-quantity__note">※純正の約98％の風力を確保</p>
+      </div>
+      <figure class="pg-mlitfilter-air-quantity__meter pg-mlitfilter-air-quantity__meter--mlitfilter">
+        <img class="pg-mlitfilter-air-quantity__meter-image pg-mlitfilter-air-quantity__meter-image--mlitfilter" src="{{ asset('build/images/mlitfilter/air_quantity_mlit_meter_pc.png') }}" alt="" width="600" height="760" loading="lazy">
+        
+      </figure>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{% set headingLevel = h_level|default(3) %}
+<article class="c-cards-media">
+  <a class="c-cards-media__link" href="{{ href }}">
+    {% if image is defined and image %}
+      <img class="c-cards-media__image" src="{{ asset(image) }}" alt="{{ imageAlt }}" width="552" height="552">
+    {% endif %}
+    <span class="c-cards-media__meta">
+      <time class="c-cards-media__date">{{ date }}</time>
+      <span class="c-cards-media__category">{{ category }}</span>
+    </span>
+    <h{{ headingLevel }} class="c-cards-media__title">{{ title }}</h{{ headingLevel }}>
+  </a>
+</article>

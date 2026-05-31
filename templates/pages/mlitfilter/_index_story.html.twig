@@ -1,0 +1,16 @@
+<section class="pg-mlitfilter-story">
+  <div class="pg-mlitfilter-story__container">
+    <div class="pg-mlitfilter-story__visual">
+      <h2 class="pg-mlitfilter-story__title">技術にこだわりぬいた日本製</h2>
+      <p class="pg-mlitfilter-story__label">MADE in JAPAN</p>
+    </div>
+    <div class="pg-mlitfilter-story__list">
+      {% for item in storyItems %}
+        <article class="pg-mlitfilter-story__item pg-mlitfilter-story__item--{{ item.type }}">
+          <h3 class="pg-mlitfilter-story__name">{{ item.title|nl2br }}</h3>
+          <p class="pg-mlitfilter-story__text">{{ item.text|nl2br }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

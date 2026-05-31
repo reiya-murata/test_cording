@@ -1,0 +1,22 @@
+<section class="pg-index-news" id="news">
+  <div class="pg-index-news__container">
+    <p class="pg-index-news__background" aria-hidden="true">MLIT NEWS</p>
+    <div class="pg-index-news__list">
+      {% for item in newsItems %}
+        {% include 'components/cards/_news.html.twig' with {
+          date: item.date,
+          category: item.category,
+          title: item.title,
+          href: item.href
+        } only %}
+      {% endfor %}
+    </div>
+    <div class="pg-index-news__actions">
+      {% include 'components/buttons/_base.html.twig' with {
+        color: 'outline',
+        label: '一覧を見る',
+        href: '#news'
+      } only %}
+    </div>
+  </div>
+</section>

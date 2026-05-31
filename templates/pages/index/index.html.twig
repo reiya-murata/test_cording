@@ -1,0 +1,21 @@
+{% extends "pages/base.html.twig" %}
+{% set _page = "index" %}
+
+{% block title %}MLIT INDUSTRIES inc.{% endblock %}
+{% block meta_description %}MLIT INDUSTRIES inc.の製品情報、ニュース、メディア掲載情報を紹介します。{% endblock %}
+
+{% block body %}
+<main class="pg-index">
+  {% include 'pages/index/_index_hero.html.twig' with {} only %}
+  {% include 'pages/index/_index_cling_air.html.twig' with {} only %}
+  {% include 'pages/index/_index_products.html.twig' with {
+    productItems: productItems
+  } only %}
+  {% include 'pages/index/_index_news.html.twig' with {
+    newsItems: newsItems
+  } only %}
+  {% include 'pages/index/_index_media.html.twig' with {
+    mediaItems: mediaItems
+  } only %}
+</main>
+{% endblock %}

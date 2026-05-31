@@ -1,0 +1,13 @@
+<nav class="c-layouts-breadcrumb" aria-label="パンくずリスト">
+  <ol class="c-layouts-breadcrumb__list">
+    {% for item in items %}
+      <li class="c-layouts-breadcrumb__item">
+        {% if item.href %}
+          <a class="c-layouts-breadcrumb__link" href="{{ item.href }}">{{ item.label }}</a>
+        {% else %}
+          <span class="c-layouts-breadcrumb__current" aria-current="page">{{ item.label }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

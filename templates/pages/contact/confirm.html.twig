@@ -1,0 +1,65 @@
+{% extends "pages/base.html.twig" %}
+{% set _page = "contact" %}
+{% block title %}Contact{% endblock %}
+{% block body %}
+  <h1>Contact</h1>
+
+  {{ form_start(confirm, {
+    action: path('contact_complete')
+  }) }}
+
+  {% embed "components/form/_row.html.twig" with {
+    label: form.name.vars.label,
+    value: form.name.vars.value,
+    is_confirm: true
+  } only %}
+  {% endembed %}
+
+  {% embed "components/form/_row.html.twig" with {
+    label: form.gender.vars.label,
+    value: form.gender.vars.value,
+    is_confirm: true
+  } only %}
+  {% endembed %}
+  {% embed "components/form/_row.html.twig" with {
+    label: form.reason.vars.label,
+    value: form.reason.vars.value|join('、'),
+    is_confirm: true
+  } only %}
+  {% endembed %}
+
+  {% embed "components/form/_row.html.twig" with {
+    label: form.postal1.vars.label,
+    value: form.postal1.vars.value~"-"~form.postal2.vars.value,
+    is_confirm: true
+  } only %}
+  {% endembed %}
+
+  {% embed "components/form/_row.html.twig" with {
+    label: form.pref.vars.label,
+    value: form.pref.vars.value,
+    is_confirm: true
+  } only %}
+  {% endembed %}
+
+  {% embed "components/form/_row.html.twig" with {
+    label: form.email.vars.label,
+    value: form.email.vars.value,
+    is_confirm: true
+  } only %}
+  {% endembed %}
+
+
+  {% embed "components/form/_row.html.twig" with {
+    label: form.message.vars.label,
+    value: form.message.vars.value,
+    is_confirm: true
+  } only %}
+  {% endembed %}
+
+  <div>
+    <button type="submit">送信</button>
+  </div>
+  {{ form_end(confirm) }}
+
+{% endblock %}

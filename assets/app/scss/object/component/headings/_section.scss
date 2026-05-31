@@ -1,0 +1,99 @@
+@use "../../../global/functions" as *;
+@use "../../../global/variables" as *;
+@use "../../../global/mixins" as *;
+
+.c-headings-section {
+  &__label {
+    font-size: text-size(13);
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin: 0 0 size(10);
+    color: $color-main-green;
+  }
+
+  &__title {
+    font-size: text-size(34);
+    line-height: 1.35;
+    margin: 0;
+    color: $color-text-main;
+  }
+
+  &__lead {
+    font-size: text-size(16);
+    line-height: 1.8;
+    margin: size(18) 0 0;
+    color: $color-text-sub;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-size: text-size(13);
+    line-height: 1.4;
+    margin-top: size(20);
+    font-family: $font-family-japanese;
+    font-weight: $font-medium;
+    letter-spacing: 0;
+    color: currentcolor;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.6;
+      text-decoration: underline;
+      text-underline-offset: size(4);
+    }
+  }
+}
+
+.c-headings-section-feature {
+  color: inherit;
+  text-align: inherit;
+
+  &__title {
+    font-size: text-size(34);
+    line-height: 1.35;
+    margin: 0;
+    color: inherit;
+    font-weight: $font-medium;
+  }
+
+  &__label {
+    font-family: $font-family-english;
+    font-size: text-size(22);
+    font-weight: $font-bold;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    margin: size(28) 0 0;
+    color: inherit;
+  }
+
+  &--air-quantity &__title {
+    font-size: text-size(24);
+  }
+
+  &--technology &__title {
+    font-size: text-size(30);
+    line-height: 1.4;
+  }
+
+  &--technology &__label {
+    font-size: text-size(20);
+    margin-top: size(24);
+  }
+}
+
+@include md {
+  .c-headings-section-feature {
+    &--performance &__title,
+    &--air-quantity &__title {
+      font-size: text-size(54);
+      line-height: 1.28;
+    }
+
+    &--technology &__title {
+      font-size: text-size(56);
+      line-height: 1.3;
+    }
+  }
+}

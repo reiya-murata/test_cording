@@ -1,0 +1,60 @@
+@use "../../../global/functions" as *;
+@use "../../../global/variables" as *;
+@use "../../../global/mixins" as *;
+
+.c-sections-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: size(34);
+  color: $color-text-main;
+  text-align: center;
+  margin: auto;
+
+  &__title {
+    font-size: text-size(20);
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  &__lead {
+    font-size: text-size(18);
+    line-height: 2;
+    margin-top: size(30);
+    color: $color-text-main;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@include md {
+  .c-sections-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: size(34);
+    color: $color-text-main;
+    text-align: center;
+
+    &__title {
+      font-size: text-size(40);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    &__lead {
+      font-size: text-size(18);
+      line-height: 2;
+      margin-top: size(30);
+      color: $color-text-main;
+    }
+
+    &__action {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

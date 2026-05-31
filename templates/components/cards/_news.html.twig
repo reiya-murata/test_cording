@@ -1,0 +1,10 @@
+{% set headingLevel = h_level|default(3) %}
+<article class="c-cards-news">
+  <a class="c-cards-news__link" href="{{ href }}">
+    <span class="c-cards-news__meta">
+      <time class="c-cards-news__date">{{ date }}</time>
+      <span class="c-cards-news__category">{{ category }}</span>
+    </span>
+    <h{{ headingLevel }} class="c-cards-news__title">{{ title }}</h{{ headingLevel }}>
+  </a>
+</article>

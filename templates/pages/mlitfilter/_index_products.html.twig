@@ -1,0 +1,18 @@
+<section class="pg-mlitfilter-products" id="products">
+  <div class="pg-mlitfilter-products__container">
+    {% include 'components/headings/_section.html.twig' with {
+      label: 'Products',
+      title: '製品カテゴリ',
+      lead: '用途や設置環境に合わせて選べるMLIT FILTERのラインナップです。'
+    } only %}
+    <div class="pg-mlitfilter-products__list">
+      {% for item in productItems %}
+        {% include 'components/cards/_product.html.twig' with {
+          title: item.title,
+          lead: item.lead,
+          href: item.href
+        } only %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

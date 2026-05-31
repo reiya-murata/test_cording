@@ -1,0 +1,43 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env
+/.env.local.php
+/.env.*.local
+/bem-rules.md
+/front_coding_rule.md
+/config/secrets/prod/prod.decrypt.private.php
+/config/secrets/*/*.decrypt.private.php
+/config/secrets/*/*SLACK_TOKEN*.php
+/public_html/bundles/
+/public_html/assets/
+/public_html/files
+/public_html/*sitemap.xml
+/var/
+/vendor/
+/triple-e/*
+/docker-compose.yml
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public_html/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+
+.DS_Store
+/assets/app/scss/app.css
+/assets/app/scss/app.css.map
+/data/*
+/resources/init/data/
+/.idea/*
+.git_broken_*/
+
+# local Symfony server config
+/.symfony/

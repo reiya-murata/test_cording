@@ -1,0 +1,43 @@
+@use "../../global/variables" as *;
+
+@mixin u-notosans-regular-tracking-0 {
+  font-family: $font-family-japanese;
+  font-weight: $font-normal;
+  letter-spacing: 0;
+}
+
+@mixin u-notosans-medium-tracking-0 {
+  font-family: $font-family-japanese;
+  font-weight: $font-medium;
+  letter-spacing: 0;
+}
+
+@mixin u-notosans-bold-tracking-0 {
+  font-family: $font-family-japanese;
+  font-weight: $font-bold;
+  letter-spacing: 0;
+}
+
+@mixin u-notosans-regular-tracking-50 {
+  font-family: $font-family-japanese;
+  font-weight: $font-normal;
+  letter-spacing: 0.05em;
+}
+
+@mixin u-montserrat-regular-tracking-0 {
+  font-family: $font-family-english;
+  font-weight: $font-normal;
+  letter-spacing: 0;
+}
+
+@mixin u-montserrat-regular-tracking-50 {
+  font-family: $font-family-english;
+  font-weight: $font-normal;
+  letter-spacing: 0.05em;
+}
+
+@mixin u-montserrat-bold-tracking-0 {
+  font-family: $font-family-english;
+  font-weight: $font-bold;
+  letter-spacing: 0;
+}

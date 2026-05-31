@@ -1,0 +1,11 @@
+{% set headingLevel = h_level|default(2) %}
+<div class="c-headings-section">
+  <p class="c-headings-section__label">{{ label }}</p>
+  <h{{ headingLevel }} class="c-headings-section__title">{{ title }}</h{{ headingLevel }}>
+  {% if lead is defined and lead %}
+    <p class="c-headings-section__lead">{{ lead }}</p>
+  {% endif %}
+  {% if linkLabel is defined and href is defined and linkLabel and href %}
+    <a class="c-headings-section__link" href="{{ href }}">{{ linkLabel }}</a>
+  {% endif %}
+</div>

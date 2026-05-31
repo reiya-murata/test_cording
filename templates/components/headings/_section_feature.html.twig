@@ -1,0 +1,6 @@
+{% set headingLevel = h_level|default(2) %}
+
+<div class="c-headings-section-feature{% if type is defined and type %} c-headings-section-feature--{{ type }}{% endif %}">
+  <h{{ headingLevel }} class="c-headings-section-feature__title">{{ title }}</h{{ headingLevel }}>
+  <p class="c-headings-section-feature__label">{{ label }}</p>
+</div>

@@ -1,0 +1,33 @@
+@use "../../../global/functions" as *;
+@use '../../../global/variables' as *;
+
+.c-form-row {
+  &__label {
+  }
+
+  &__required {
+    color: $color-error;
+  }
+
+  &__body {
+  }
+
+  &__elements {
+    .form-select,
+    .form-control {
+      border: 1px solid $color-black;
+    }
+
+    .is-invalid {
+      background-color: $color-error-background;
+    }
+  }
+
+  &__errors {
+  }
+
+  &__error {
+    margin-top: size(8);
+    color: $color-error;
+  }
+}

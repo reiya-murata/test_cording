@@ -1,0 +1,60 @@
+{% extends "pages/base.html.twig" %}
+{% set _page = "contact" %}
+{% block title %}Contact{% endblock %}
+{% block body %}
+  <h1>Contact</h1>
+
+  {{ form_start(form, {
+    action: path('contact_confirm')
+  }) }}
+
+  {% embed "components/form/_row.html.twig" with {
+    form: form.name
+  } only %}
+  {% endembed %}
+
+  {% embed "components/form/_row.html.twig" with {
+    form: form.gender
+  } only %}
+  {% endembed %}
+  {% embed "components/form/_row.html.twig" with {
+    form: form.reason
+  } only %}
+  {% endembed %}
+
+  {% embed "components/form/_row.html.twig" with {
+    label: form.postal1.vars.label,
+    postal1: form.postal1,
+    postal2: form.postal2,
+  } only %}
+    {% block elements %}
+      {{ form_widget(postal1) }} - {{ form_widget(postal2) }}
+    {% endblock %}
+    {% block errors %}
+      {{ form_errors(postal1) }}
+      {{ form_errors(postal2) }}
+    {% endblock %}
+  {% endembed %}
+
+  {% embed "components/form/_row.html.twig" with {
+    form: form.pref
+  } only %}
+  {% endembed %}
+
+  {% embed "components/form/_row.html.twig" with {
+    form: form.email
+  } only %}
+  {% endembed %}
+
+
+  {% embed "components/form/_row.html.twig" with {
+    form: form.message
+  } only %}
+  {% endembed %}
+
+  <div>
+    <button type="submit">確認へ</button>
+  </div>
+  {{ form_end(form) }}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<header class="l-header">
+  <div class="l-header__container">
+    <a class="l-header__brand" href="{{ path('top') }}" aria-label="MLIT INDUSTRIES inc.">
+      <img class="l-header__logo" src="{{ asset('build/images/mlitfilter/logo_main.png') }}" alt="MLIT INDUSTRIES inc." width="192" height="28">
+    </a>
+    <button class="l-header__menu js-header-menu" type="button" aria-controls="global-navigation" aria-expanded="false">
+      <span class="l-header__menu-text">MENU</span>
+      <span class="l-header__menu-line"></span>
+      <span class="l-header__menu-line"></span>
+      <span class="l-header__menu-line"></span>
+    </button>
+    <div class="l-header__panel js-header-menu-panel" id="global-navigation">
+      <nav class="l-header__navigation" aria-label="グローバルナビゲーション">
+        <a class="l-header__link" href="{{ path('mlitfilter_index') }}">MLITFILTER</a>
+        <a class="l-header__link" href="#cling-air">CLING-AIR</a>
+        <a class="l-header__link" href="#hk-filter">HK by UNIVERSE FILTER</a>
+        <a class="l-header__link" href="#element">HKエアエレメント</a>
+        <a class="l-header__link" href="#muffler">マフラー</a>
+        <a class="l-header__link" href="#mask">エムリットマスク</a>
+      </nav>
+      <div class="l-header__actions">
+        <a class="l-header__language" href="#language">
+          <img class="l-header__language-icon" src="{{ asset('build/images/mlitfilter/icon_net.png') }}" alt="" width="60" height="60">
+          <span class="l-header__language-text">日本語</span>
+        </a>
+        <a class="l-header__contact" href="{{ path('contact_index') }}">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</header>

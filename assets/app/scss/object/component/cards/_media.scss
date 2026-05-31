@@ -1,0 +1,76 @@
+@use "../../../global/functions" as *;
+@use "../../../global/variables" as *;
+@use "../../../global/mixins" as *;
+
+.c-cards-media {
+  height: 100%;
+
+  &__link {
+    display: grid;
+    gap: size(14);
+    color: $color-text-main;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  &__link:hover,
+  &__link:focus-visible {
+    opacity: 0.6;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: size(20);
+  }
+
+  &__date {
+    font-size: text-size(12);
+    line-height: 1.4;
+    color: $color-category-gray;
+  }
+
+  &__category {
+    font-size: text-size(11);
+    line-height: 1.4;
+    padding: size(4) size(10);
+    color: $color-white;
+    background-color: $color-category-gray;
+    border-radius: size(999);
+  }
+
+  &__title {
+    font-size: text-size(18);
+    line-height: 1.75;
+    padding-right: size(28);
+    margin: 0;
+  }
+}
+
+@include xl {
+  .c-cards-media {
+    &__link {
+      gap: size(8);
+    }
+
+    &__date {
+      font-size: text-size(16);
+    }
+
+    &__category {
+      font-size: text-size(12);
+      padding: size(4) size(16);
+    }
+
+    &__title {
+      font-size: text-size(20);
+      padding-right: size(40);
+    }
+  }
+}

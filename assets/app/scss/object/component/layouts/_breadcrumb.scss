@@ -1,0 +1,57 @@
+@use "../../../global/functions" as *;
+@use "../../../global/variables" as *;
+@use "../../../global/mixins" as *;
+
+.c-layouts-breadcrumb {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: size(8);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    font-size: text-size(12);
+    line-height: 1.4;
+    color: $color-text-sub;
+  }
+
+  &__item:not(:last-child)::after {
+    margin-left: size(8);
+    color: $color-category-gray;
+    content: "/";
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: text-size(16);
+    transition: opacity 0.2s ease;
+  }
+
+  &__link:hover,
+  &__link:focus-visible {
+    opacity: 0.6;
+  }
+
+  &__current {
+    font-size: text-size(16);
+    color: $color-category-gray;
+  }
+}
+
+@include xl {
+  .c-layouts-breadcrumb {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: size(8);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      width: size(1200);
+      margin-inline: auto;
+    }
+  }
+}

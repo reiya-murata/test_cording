@@ -1,0 +1,81 @@
+@use "../global/functions" as *;
+@use "../global/variables" as *;
+@use "../object/utility/contents_style" as *;
+
+#error {
+  color: $color-text-main;
+  background-color: $color-white;
+
+  .pg-error {
+    min-height: size(520);
+    padding-top: size(58);
+  }
+
+  .pg-error-hero {
+    display: grid;
+    place-items: center;
+    min-height: size(520);
+    padding: size(80) size(24);
+    text-align: center;
+    background-color: $color-background;
+
+    &__container {
+      @include contents-narrow;
+    }
+
+    &__code {
+      font-family: $font-family-english;
+      font-weight: $font-bold;
+      letter-spacing: 0;
+      margin: 0;
+      color: $color-main-green;
+      font-size: text-size(92);
+      line-height: 1;
+    }
+
+    &__title {
+      font-family: $font-family-japanese;
+      font-weight: $font-bold;
+      letter-spacing: 0;
+      margin: size(24) 0 0;
+      color: $color-text-main;
+      font-size: text-size(32);
+      line-height: 1.45;
+    }
+
+    &__text {
+      font-family: $font-family-japanese;
+      font-weight: $font-medium;
+      letter-spacing: 0;
+      margin: size(24) 0 0;
+      color: $color-text-main;
+      font-size: text-size(14);
+      line-height: 2;
+    }
+
+    &__link {
+      font-family: $font-family-japanese;
+      font-weight: $font-bold;
+      letter-spacing: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: size(220);
+      min-height: size(48);
+      margin-top: size(40);
+      padding: size(10) size(24);
+      color: $color-white;
+      font-size: text-size(14);
+      line-height: 1.4;
+      text-decoration: none;
+      background-color: $color-main-green;
+      border-radius: size(24);
+      transition: opacity 0.2s ease;
+    }
+
+    &__link:hover,
+    &__link:focus-visible {
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{% set headingLevel = h_level|default(3) %}
+<article class="c-cards-product c-cards-product--{{ type|default('default') }}">
+  <a class="c-cards-product__link" href="{{ href }}">
+    {% if image is defined and image %}
+      <img class="c-cards-product__image" src="{{ asset(image) }}" {% if imageSp is defined and imageSp %}srcset="{{ asset(imageSp) }} 767w, {{ asset(image) }} 1200w" sizes="(min-width: 768px) 50vw, 100vw"{% endif %} alt="{{ imageAlt }}" width="1896" height="1200">
+    {% endif %}
+    <span class="c-cards-product__body">
+      {% if logo is defined and logo %}
+        <img class="c-cards-product__logo" src="{{ asset(logo) }}" alt="{{ logoAlt }}" width="256" height="176">
+      {% endif %}
+      <h{{ headingLevel }} class="c-cards-product__title">{{ title }}</h{{ headingLevel }}>
+      {% if label is defined and label %}
+        <span class="c-cards-product__label">{{ label }}</span>
+      {% endif %}
+      <span class="c-cards-product__lead">{{ lead|nl2br }}</span>
+      {% if linkLabel is defined and linkLabel %}
+        <span class="c-cards-product__more">{{ linkLabel }}</span>
+      {% endif %}
+    </span>
+  </a>
+</article>

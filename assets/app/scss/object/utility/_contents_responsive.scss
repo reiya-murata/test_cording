@@ -1,0 +1,11 @@
+@use "../../global/mixins" as *;
+@use "../../global/functions" as *;
+
+@mixin responsive-grid($columns: 3, $gap: 24) {
+  display: grid;
+  gap: size($gap);
+
+  @include xl {
+    grid-template-columns: repeat($columns, minmax(0, 1fr));
+  }
+}

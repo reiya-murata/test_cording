@@ -1,0 +1,19 @@
+<section class="pg-mlitfilter-news">
+  <div class="pg-mlitfilter-news__container">
+    {% include 'components/headings/_section.html.twig' with {
+      label: 'News',
+      title: 'お知らせ',
+      lead: 'MLIT FILTERに関する最新情報をお届けします。'
+    } only %}
+    <div class="pg-mlitfilter-news__list">
+      {% for item in newsItems %}
+        {% include 'components/cards/_news.html.twig' with {
+          date: item.date,
+          category: item.category,
+          title: item.title,
+          href: item.href
+        } only %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

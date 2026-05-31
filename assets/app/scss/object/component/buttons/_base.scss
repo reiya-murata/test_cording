@@ -1,0 +1,111 @@
+@use "../../../global/functions" as *;
+@use "../../../global/variables" as *;
+@use "../../../global/mixins" as *;
+
+.c-buttons-base {
+  font-size: text-size(15);
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: size(9);
+  min-width: 0;
+  min-height: 0;
+  padding: 0 0 size(3);
+  border: 1px solid transparent;
+  border-radius: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &--green {
+    min-width: size(168);
+    min-height: size(46);
+    padding: size(12) size(32);
+    border-radius: size(999);
+    color: $color-white;
+    background-color: $color-main-green;
+    border-color: $color-main-green;
+  }
+
+  &--white {
+    color: $color-white;
+    background-color: transparent;
+  }
+
+  &--outline {
+    color: $color-text-main;
+    background-color: transparent;
+  }
+
+  &__label {
+    display: block;
+    border-bottom: 1px solid transparent;
+    text-decoration-line: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: size(5);
+    transition: border-color 0.2s ease, text-decoration-color 0.2s ease;
+  }
+
+  &--green:hover,
+  &--green:focus-visible {
+    opacity: 0.6;
+  }
+
+  &--white:hover &__label,
+  &--white:focus-visible &__label,
+  &--outline:hover &__label,
+  &--outline:focus-visible &__label {
+    border-color: currentcolor;
+    text-decoration-color: currentcolor;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: size(24);
+    height: size(24);
+    background-image: url("~/images/mlitfilter/icon_circle_arrow_white.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--outline {
+    padding-right: size(24);
+  }
+
+  &--outline::after {
+    width: size(32);
+    height: size(32);
+    border: 1px solid currentcolor;
+    border-radius: 50%;
+    background-image: url("~/images/mlitfilter/icon_arrow_black.png");
+    background-size: size(6) auto;
+  }
+}
+
+@include xl {
+  .c-buttons-base {
+    font-size: text-size(15);
+
+    &::after {
+      width: size(24);
+      height: size(24);
+    }
+
+    &__label {
+      font-size: text-size(16);
+    }
+
+    &--outline {
+      padding: 0;
+    }
+
+    &--green {
+      min-width: size(168);
+      min-height: size(46);
+      padding: size(12) size(32);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{% set _currentRoute = app.request.attributes.get('_route') %}
+{% set _currentParams = app.request.query.all %}
+{% if path_params is defined %}
+  {% set _currentParams = _currentParams|merge(path_params) %}
+{% endif %}
+{% if paginate.hasPagination %}
+
+  <ul class="c-paginations-base">
+    {% if not paginate.isFirstPage %}
+      <li class="c-paginations-base__item c-paginations-base__item--first">
+        <a href="{{ path(_currentRoute, _currentParams|merge({page: 1})) }}" class="c-paginations-base__link">
+          最初
+        </a>
+      </li>
+    {% endif %}
+
+    {% for i in paginate.getSlidingPageList(4) %}
+      {% if i == paginate.getCurrentPage %}
+        <li class="c-paginations-base__item c-paginations-base__item--active">
+          <b class="c-paginations-base__link">{{ i }}</b>
+        </li>
+      {% else %}
+        <li class="c-paginations-base__item">
+          <a href="{{ path(_currentRoute, _currentParams|merge({page: i})) }}" class="c-paginations-base__link">
+            {{ i }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+
+    {% if not paginate.isLastPage %}
+      <li class="c-paginations-base__item c-paginations-base__item--last">
+        <a href="{{ path(_currentRoute, _currentParams|merge({page: paginate.getTotalPage})) }}" class="c-paginations-base__link">
+          最後
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+{% endif %}

@@ -1,0 +1,448 @@
+/**
+ * フッター
+ */
+@use "../global/functions" as *;
+@use "../global/variables" as *;
+@use "../global/mixins" as *;
+@use "../object/utility/contents_style" as *;
+
+.l-footer {
+  background-color: $color-header-footer;
+  color: $color-white;
+  padding: size(24);
+
+  &__top {
+    font-size: text-size(18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: size(3);
+    min-height: size(88);
+    color: rgba($color-white, 0.82);
+    text-decoration: none;
+    background-color: $color-topback-button;
+    transition: opacity 0.2s ease;
+  }
+
+  &__top::before {
+    content: "";
+    display: block;
+    position: relative;
+
+    width: size(14);
+    height: size(8);
+    background-image: url("~/images/mlitfilter/icon_top_arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding-block: 0 size(36);
+  }
+
+  &__media {
+    display: grid;
+    border-bottom: 1px solid rgba($color-white, 0.12);
+  }
+
+  &__media-link {
+    display: grid;
+    place-items: center;
+    min-height: size(118);
+    color: $color-white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba($color-white, 0.12);
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+  }
+
+  &__media-image {
+    display: block;
+    width: size(136);
+    height: auto;
+  }
+
+  &__body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: size(56) size(64);
+  }
+
+  &__columns {
+    display: flex;
+    flex-direction: column;
+    gap: size(120);
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: size(16);
+  }
+
+  &__contact {
+    margin-top: size(40);
+    display: flex;
+    flex-direction: column;
+    gap: size(4);
+  }
+
+  &__heading {
+    font-size: text-size(16);
+    line-height: 1.6;
+    margin: 0 0 size(12);
+    color: rgba($color-white, 0.82);
+  }
+
+  &__link,
+  &__mail,
+  &__policy,
+  &__social-link {
+    font-size: text-size(12);
+    line-height: 1.7;
+    color: rgba($color-white, 0.68);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  &__mail {
+    display: flex;
+    margin-top: size(24);
+  }
+
+  &__mail::after {
+    content: "";
+    margin-left: size(8);
+    display: block;
+    width: size(32);
+    height: size(32);
+    background-image: url("~/images/mlitfilter/icon_circle_arrow_white.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-size: text-size(18);
+    gap: size(8);
+  }
+
+  &__link::before {
+    content: "";
+    display: block;
+    flex: 0 0 size(10);
+    width: size(10);
+    height: size(1);
+    background-image: url("~/images/mlitfilter/line_footer_gray.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__phone {
+    font-size: text-size(30);
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    gap: size(9);
+    color: $color-white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  &__phone-icon {
+    display: block;
+    width: size(20);
+    height: auto;
+  }
+
+  &__phone-number {
+    font-family: $font-family-english;
+    font-weight: $font-bold;
+    letter-spacing: 0;
+    display: inline-block;
+    font-size: text-size(32);
+  }
+
+  &__text {
+    font-size: text-size(13);
+    line-height: 1.8;
+    margin: 0;
+    color: rgba($color-white, 0.68);
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: size(28);
+    padding-top: size(32);
+    border-top: 1px solid rgba($color-white, 0.12);
+  }
+
+  &__copyright {
+    font-size: text-size(10);
+    line-height: 1.4;
+    font-family: $font-family-english;
+    font-weight: $font-normal;
+    letter-spacing: 0.05em;
+    color: rgba($color-white, 0.72);
+  }
+
+  &__social {
+    display: flex;
+    gap: size(20);
+
+  }
+
+  &__social-link {
+    display: grid;
+    place-items: center;
+    width: size(30);
+    height: size(30);
+  }
+
+  &__top:hover,
+  &__top:focus-visible,
+  &__media-link:hover,
+  &__media-link:focus-visible,
+  &__phone:hover,
+  &__phone:focus-visible,
+  &__social-link:hover,
+  &__social-link:focus-visible {
+    opacity: 0.6;
+  }
+
+  &__link:hover,
+  &__link:focus-visible,
+  &__mail:hover,
+  &__mail:focus-visible,
+  &__policy:hover,
+  &__policy:focus-visible {
+    color: $color-white;
+    opacity: 0.6;
+  }
+
+  &__social-icon {
+    display: block;
+    width: size(30);
+    height: size(30);
+    object-fit: contain;
+  }
+}
+
+@include md {
+  .l-footer {
+    padding: 0;
+    &__top {
+      min-height: size(122);
+    }
+
+    &__media {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__media-link {
+      min-height: size(122);
+      border-right: 1px solid rgba($color-white, 0.12);
+      border-bottom: 0;
+    }
+
+    &__media-image {
+      width: size(136);
+    }
+
+    &__body {
+      margin-left: size(40);
+      margin-right: size(40);
+      display: flex;
+      flex-direction: initial;
+      justify-content: space-between;
+      padding-top: size(40);
+      padding-bottom: size(108);
+    }
+
+    &__heading {
+      font-size: text-size(18);
+      margin-bottom: size(12);
+    }
+
+    &__heading--contact {
+      font-size: text-size(20);
+      margin-bottom: size(12);
+    }
+
+    &__link,
+    &__mail,
+    &__policy,
+    &__social-link {
+      font-size: text-size(16);
+    }
+
+
+    &__columns {
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      gap: size(40);
+    }
+
+    &__column {
+      gap: size(8);
+    }
+
+    &__contact {
+      margin: 0;
+      gap: size(8);
+    }
+
+    &__phone {
+      font-size: text-size(30);
+    }
+
+    &__text {
+      font-size: text-size(13);
+    }
+
+    &__bottom {
+      padding-top: size(38);
+      padding-left: size(100);
+      padding-right: size(120);
+      justify-content: space-between;
+    }
+
+    &__copyright {
+      font-size: text-size(16);
+      line-height: 1.4;
+      color: rgba($color-white, 0.72);
+      padding-right: size(40);
+    }
+
+
+    &__social {
+      display: flex;
+      gap: size(80);
+      position: relative;
+      right: 0;
+    }
+
+    &__social-icon {
+      display: block;
+
+      width: size(30);
+      height: size(30);
+      object-fit: contain;
+      margin-right: size(8);
+    }
+  }
+}
+
+@include xl {
+  .l-footer {
+    padding: 0;
+    &__top {
+      min-height: size(122);
+    }
+
+    &__media {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__media-link {
+      min-height: size(122);
+      border-right: 1px solid rgba($color-white, 0.12);
+      border-bottom: 0;
+    }
+
+    &__media-image {
+      width: size(136);
+    }
+
+    &__body {
+      margin-left: size(100);
+      margin-right: size(88);
+      display: flex;
+      flex-direction: initial;
+      justify-content: space-between;
+      padding-top: size(40);
+      padding-bottom: size(108);
+    }
+
+    &__heading {
+      font-size: text-size(20);
+      margin-bottom: size(12);
+    }
+
+    &__heading--contact {
+      font-size: text-size(24);
+      margin-bottom: size(12);
+    }
+
+    &__link,
+    &__mail,
+    &__policy,
+    &__social-link {
+      font-size: text-size(18);
+    }
+
+
+    &__columns {
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      gap: size(120);
+    }
+
+    &__column {
+      gap: size(16);
+
+    }
+
+    &__contact {
+      margin: 0;
+      gap: size(8);
+    }
+
+    &__phone {
+      font-size: text-size(30);
+    }
+
+    &__text {
+      font-size: text-size(13);
+    }
+
+    &__bottom {
+      padding-top: size(38);
+      padding-left: size(100);
+      padding-right: size(120);
+      justify-content: space-between;
+    }
+
+    &__copyright {
+      font-size: text-size(16);
+      line-height: 1.4;
+      color: rgba($color-white, 0.72);
+    }
+
+
+    &__social {
+      display: flex;
+      gap: size(80);
+      position: relative;
+      right: 0;
+    }
+
+    &__social-icon {
+      display: block;
+      width: auto;
+      height: size(30);
+      object-fit: contain;
+      margin-right: size(8);
+    }
+  }
+}

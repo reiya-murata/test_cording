@@ -1,0 +1,190 @@
+@use "../../../global/functions" as *;
+@use "../../../global/variables" as *;
+@use "../../../global/mixins" as *;
+
+.c-cards-product {
+  position: relative;
+  aspect-ratio: 79 / 50;
+  min-height: auto;
+  overflow: hidden;
+  background-color: $color-black;
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: size(36) size(24);
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &__link:hover &__image,
+  &__link:focus-visible &__image {
+    transform: scale(1.03);
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    display: grid;
+
+  }
+
+  &__logo {
+    display: block;
+    width: size(120);
+    height: auto;
+  }
+
+  &__label {
+    font-family: $font-family-english;
+    font-weight: $font-bold;
+    letter-spacing: 0.05em;
+    font-size: text-size(18);
+    line-height: 1.35;
+    color: $color-white;
+  }
+
+  &__title {
+    font-size: text-size(24);
+    line-height: 1.45;
+    margin: 0;
+    font-weight: $font-bold;
+  }
+
+  &__lead {
+    font-size: text-size(16);
+    line-height: 1.6;
+    margin: 0;
+    color: $color-white;
+    font-weight: $font-medium;
+  }
+
+  &__more {
+    font-size: text-size(14);
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+    gap: size(8);
+    margin-top: size(8);
+    color: $color-white;
+    font-weight: $font-medium;
+    text-decoration-line: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: size(5);
+    transition: text-decoration-color 0.2s ease;
+  }
+
+  &__link:hover &__more,
+  &__link:focus-visible &__more {
+    text-decoration-color: currentcolor;
+  }
+
+  &__more::after {
+    content: "";
+    display: block;
+    width: size(32);
+    height: size(32);
+    background-image: url("~/images/mlitfilter/icon_circle_arrow_white.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--mask {
+    background-color: $color-main-green;
+  }
+}
+
+@include md {
+  .c-cards-product {
+    aspect-ratio: auto;
+    min-height: size(420);
+
+    &__link {
+      padding: size(56);
+    }
+
+    &__body {
+      top: size(-10);
+    }
+
+    &__logo {
+      width: size(128);
+    }
+
+    &__title {
+      margin-top: size(8);
+      font-size: text-size(40);
+    }
+
+    &__label {
+      margin-top: size(8);
+      font-size: text-size(20);
+    }
+
+    &__lead {
+      margin-top: size(16);
+      font-size: text-size(20);
+    }
+
+    &__more {
+      margin-top: size(32);
+      font-size: text-size(18);
+    }
+  }
+}
+
+@include xl {
+  .c-cards-product {
+    aspect-ratio: auto;
+    min-height: size(600);
+
+    &__link {
+      padding: size(80);
+    }
+
+    &__body {
+      top: size(-10);
+
+
+    }
+
+    &__logo {
+      width: size(128);
+    }
+
+    &__title {
+      margin-top: size(8);
+      font-size: text-size(40);
+    }
+
+    &__label {
+      margin-top: size(8);
+      font-size: text-size(20);
+    }
+
+
+    &__lead {
+      margin-top: size(16);
+      font-size: text-size(20);
+    }
+
+    &__more {
+      margin-top: size(32);
+      font-size: text-size(18);
+    }
+  }
+}

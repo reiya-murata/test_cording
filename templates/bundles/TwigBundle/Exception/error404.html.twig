@@ -1,0 +1,20 @@
+{% extends "pages/base.html.twig" %}
+{% set _page = "error" %}
+
+{% block title %}404 Not Found{% endblock %}
+
+{% block body %}
+  <main class="pg-error">
+    <section class="pg-error-hero">
+      <div class="pg-error-hero__container">
+        <p class="pg-error-hero__code">404</p>
+        <h1 class="pg-error-hero__title">ページが見つかりません</h1>
+        <p class="pg-error-hero__text">
+          お探しのページは移動または削除された可能性があります。<br>
+          URLをご確認いただくか、トップページから目的のページをお探しください。
+        </p>
+        <a class="pg-error-hero__link" href="{{ path('top') }}">トップページへ戻る</a>
+      </div>
+    </section>
+  </main>
+{% endblock %}

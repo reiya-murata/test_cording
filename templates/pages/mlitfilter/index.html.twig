@@ -1,0 +1,20 @@
+{% extends "pages/base.html.twig" %}
+{% set _page = "mlitfilter" %}
+
+{% block title %}MLIT FILTER{% endblock %}
+{% block meta_description %}MLIT FILTERの製品特長、導入情報、技術背景を紹介します。{% endblock %}
+
+{% block body %}
+<main class="pg-mlitfilter">
+  {% include 'pages/mlitfilter/_index_navigation.html.twig' with {} only %}
+  {% include 'pages/mlitfilter/_index_hero.html.twig' with {} only %}
+  {% include 'pages/mlitfilter/_index_performance.html.twig' with {} only %}
+  {% include 'pages/mlitfilter/_index_air_quantity.html.twig' with {} only %}
+  {% include 'pages/mlitfilter/_index_technology.html.twig' with {} only %}
+  {% include 'pages/mlitfilter/_index_material.html.twig' with {} only %}
+  {% include 'pages/mlitfilter/_index_story.html.twig' with {
+    storyItems: storyItems
+  } only %}
+  {% include 'pages/mlitfilter/_index_contact.html.twig' with {} only %}
+</main>
+{% endblock %}

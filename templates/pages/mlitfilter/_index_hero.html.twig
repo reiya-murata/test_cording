@@ -1,0 +1,27 @@
+<section class="pg-mlitfilter-hero">
+  <div class="pg-mlitfilter-hero__container">
+    {% include 'components/layouts/_breadcrumb.html.twig' with {
+      items: [
+        { label: 'TOP', href: path('top') },
+        { label: 'エムリットフィルター', href: null }
+      ]
+    } only %}
+    <div class="pg-mlitfilter-hero__logo">
+      <img class="pg-mlitfilter-hero__logo-image" src="{{ asset('build/images/mlitfilter/logo_mlitfilter.png') }}" alt="MLITFILTER MADE IN JAPAN" width="560" height="162">
+    </div>
+    <h1 class="pg-mlitfilter-hero__title">独自のテクノロジー。</h1>
+    <p class="pg-mlitfilter-hero__label">INSPAIR</p>
+    <p class="pg-mlitfilter-hero__lead">
+      抗菌繊維、PM2.5を捕集する特殊形状繊維・帯電加工が織りなす<br>
+      最強の車用エアコンフィルター
+    </p>
+    <div class="pg-mlitfilter-hero__actions">
+      {% include 'components/buttons/_base.html.twig' with {
+        color: 'green',
+        label: 'フィルターを見つける',
+        href: '#performance'
+      } only %}
+    </div>
+    <img class="pg-mlitfilter-hero__image" src="{{ asset('build/images/mlitfilter/hero_filter_pc.png') }}" alt="MLIT FILTERの製品画像" width="1228" height="880">
+  </div>
+</section>

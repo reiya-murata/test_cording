@@ -1,0 +1,24 @@
+<section class="pg-index-media" id="media">
+  <div class="pg-index-media__container">
+    <p class="pg-index-media__label">MEDIA PICKUP!</p>
+    <div class="pg-index-media__list">
+      {% for item in mediaItems %}
+        {% include 'components/cards/_media.html.twig' with {
+          date: item.date,
+          category: item.category,
+          title: item.title,
+          href: item.href,
+          image: item.image,
+          imageAlt: item.imageAlt
+        } only %}
+      {% endfor %}
+    </div>
+    <div class="pg-index-media__actions">
+      {% include 'components/buttons/_base.html.twig' with {
+        color: 'outline',
+        label: '一覧を見る',
+        href: '#media'
+      } only %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<div class="c-sections-contact">
+  <div class="c-sections-contact__body">
+    <h2 class="c-sections-contact__title">{{ title }}</h2>
+    <p class="c-sections-contact__lead">
+      {% for lead_line in lead_lines %}
+        {{ lead_line }}{% if not loop.last %}<br>{% endif %}
+      {% endfor %}
+    </p>
+  </div>
+  <div class="c-sections-contact__action">
+    {% include 'components/buttons/_base.html.twig' with {
+      color: 'outline',
+      label: 'お問い合わせはこちら',
+      href: href
+    } only %}
+  </div>
+</div>

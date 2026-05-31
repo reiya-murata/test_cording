@@ -1,0 +1,18 @@
+<section class="pg-mlitfilter-media">
+  <div class="pg-mlitfilter-media__container">
+    {% include 'components/headings/_section.html.twig' with {
+      label: 'Pickup',
+      title: 'メディアピックアップ',
+      lead: '導入事例や開発背景を通じて、製品理解を深めるコンテンツです。'
+    } only %}
+    <div class="pg-mlitfilter-media__list">
+      {% for item in mediaItems %}
+        {% include 'components/cards/_media.html.twig' with {
+          label: item.label,
+          title: item.title,
+          href: item.href
+        } only %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

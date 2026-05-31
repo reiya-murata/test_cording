@@ -1,0 +1,5 @@
+@use "../variables/_fonts.scss" as font;
+
+@mixin font-base() {
+  font-family: font.$base-font;
+}

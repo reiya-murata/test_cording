@@ -1,0 +1,19 @@
+<section class="pg-index-products">
+  <div class="pg-index-products__list">
+    {% for item in productItems %}
+      {% include 'components/cards/_product.html.twig' with {
+        type: item.type,
+        logo: item.logo|default(null),
+        logoAlt: item.logoAlt|default(''),
+        title: item.title|default(null),
+        label: item.label|default(null),
+        lead: item.lead,
+        linkLabel: item.linkLabel,
+        href: item.href,
+        image: item.image,
+        imageSp: item.imageSp|default(null),
+        imageAlt: item.imageAlt
+      } only %}
+    {% endfor %}
+  </div>
+</section>
