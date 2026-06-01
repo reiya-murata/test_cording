@@ -16,6 +16,7 @@
     line-height: 1.35;
     margin: 0;
     color: $color-text-main;
+    font-weight: $font-bold;
   }
 
   &__lead {
@@ -23,11 +24,13 @@
     line-height: 1.8;
     margin: size(18) 0 0;
     color: $color-text-sub;
+    font-weight: $font-bold;
   }
 
   &__link {
     display: inline-flex;
     align-items: center;
+    gap: size(8);
     font-size: text-size(13);
     line-height: 1.4;
     margin-top: size(20);
@@ -38,12 +41,41 @@
     text-decoration: none;
     transition: opacity 0.2s ease;
 
+    &::after {
+      content: "";
+      display: inline-block;
+      flex: 0 0 size(24);
+      width: size(24);
+      min-width: size(24);
+      height: size(24);
+      border: 1px solid currentcolor;
+      border-radius: 50%;
+      background-image: url("~/images/mlitfilter/icon_arrow_black.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: size(6) auto;
+    }
+
     &:hover {
       opacity: 0.6;
       text-decoration: underline;
       text-underline-offset: size(4);
     }
   }
+}
+
+.pg-index-hero .c-headings-section__link::after {
+  border: 0;
+  border-radius: 0;
+  background-image: url("~/images/mlitfilter/icon_circle_arrow_white.png");
+  background-size: contain;
+}
+
+.pg-index-hero .c-headings-section__link {
+  text-decoration-line: underline;
+  text-decoration-color: $color-white;
+  text-decoration-thickness: 1px;
+  text-underline-offset: size(4);
 }
 
 .c-headings-section-feature {
@@ -61,7 +93,7 @@
   &__label {
     font-family: $font-family-english;
     font-size: text-size(22);
-    font-weight: $font-bold;
+    font-weight: $font-semibold;
     line-height: 1.4;
     letter-spacing: 0.05em;
     margin: size(28) 0 0;

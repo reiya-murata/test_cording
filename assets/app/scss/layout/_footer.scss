@@ -23,6 +23,7 @@
     text-decoration: none;
     background-color: $color-topback-button;
     transition: opacity 0.2s ease;
+    font-weight: $font-medium;
   }
 
   &__top::before {
@@ -96,7 +97,7 @@
     font-size: text-size(16);
     line-height: 1.6;
     margin: 0 0 size(12);
-    color: rgba($color-white, 0.82);
+    color: $color-white;
   }
 
   &__link,
@@ -105,7 +106,7 @@
   &__social-link {
     font-size: text-size(12);
     line-height: 1.7;
-    color: rgba($color-white, 0.68);
+    color: $color-white;
     text-decoration: none;
     transition: color 0.2s ease, opacity 0.2s ease;
   }
@@ -184,6 +185,7 @@
     align-items: center;
     gap: size(28);
     padding-top: size(32);
+
     border-top: 1px solid rgba($color-white, 0.12);
   }
 
@@ -191,9 +193,9 @@
     font-size: text-size(10);
     line-height: 1.4;
     font-family: $font-family-english;
-    font-weight: $font-normal;
+    font-weight: $font-medium;
     letter-spacing: 0.05em;
-    color: rgba($color-white, 0.72);
+    color: $color-white;
   }
 
   &__social {

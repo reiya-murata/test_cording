@@ -106,7 +106,7 @@
 
     &__label {
       font-family: $font-family-english;
-      font-weight: $font-bold;
+      font-weight: $font-semibold;
       letter-spacing: 0.05em;
       font-size: text-size(20);
       line-height: 1.35;
@@ -160,7 +160,6 @@
 
     &__badge {
       font-family: $font-family-japanese;
-      font-weight: $font-medium;
       font-size: text-size(16);
       line-height: 1.5;
       display: inline-block;
@@ -323,6 +322,7 @@
       line-height: 1.6;
       margin: 0;
       color: $color-white;
+      font-weight: $font-medium;
     }
 
     &__meter-list {
@@ -419,11 +419,12 @@
       font-size: text-size(16);
       line-height: 1.45;
       margin: 0;
+      font-weight: $font-medium;
     }
 
     &__label {
       font-family: $font-family-english;
-      font-weight: $font-bold;
+      font-weight: $font-semibold;
       letter-spacing: 0.05em;
       font-size: text-size(20);
       line-height: 1.4;
@@ -466,7 +467,6 @@
 
     &__text {
       font-family: $font-family-japanese;
-      font-weight: $font-medium;
       font-size: text-size(12);
       line-height: 1.8;
       margin-top: size(20);
@@ -546,6 +546,8 @@
         width: size(300);
       }
 
+      &__actions {
+      }
 
       &__image {
         width: min(100%, size(650));
@@ -833,6 +835,8 @@
         width: size(300);
       }
 
+      &__actions {
+      }
 
       &__image {
         width: min(100%, size(650));

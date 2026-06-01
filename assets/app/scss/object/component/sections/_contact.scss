@@ -21,11 +21,13 @@
     font-size: text-size(18);
     line-height: 2;
     margin-top: size(30);
+    font-weight: $font-medium;
     color: $color-text-main;
   }
 
   &__action {
     display: flex;
+    font-weight: $font-medium;
     justify-content: center;
   }
 }

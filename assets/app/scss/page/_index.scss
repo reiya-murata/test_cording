@@ -49,7 +49,7 @@
         line-height: 1.25;
         margin-top: size(40);
         color: $color-white;
-        font-weight: $font-medium;
+        font-weight: $font-bold;
       }
 
       &__lead {
@@ -118,7 +118,7 @@
         line-height: 1.35;
         margin: size(40) 0 0;
         font-family: $font-family-english;
-        font-weight: $font-semibold;
+        font-weight: $font-bold;
         letter-spacing: 0;
         color: $color-main-green;
       }
@@ -127,7 +127,7 @@
         font-size: text-size(24);
         line-height: 1.25;
         margin-top: size(40);
-        font-weight: $font-medium;
+        font-weight: $font-bold;
         font-family: $font-family-japanese;
       }
 

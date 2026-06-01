@@ -52,6 +52,8 @@
     opacity: 0.6;
   }
 
+  &--green:hover &__label,
+  &--green:focus-visible &__label,
   &--white:hover &__label,
   &--white:focus-visible &__label,
   &--outline:hover &__label,
@@ -62,8 +64,9 @@
 
   &::after {
     content: "";
-    display: block;
+    display: inline-block;
     width: size(24);
+    min-width: size(24);
     height: size(24);
     background-image: url("~/images/mlitfilter/icon_circle_arrow_white.png");
     background-repeat: no-repeat;
@@ -91,6 +94,7 @@
 
     &::after {
       width: size(24);
+      min-width: size(24);
       height: size(24);
     }
 
