@@ -1,0 +1,92 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+
+@mixin base {
+
+  .pg-index-media {
+    padding-top: size(76);
+    padding-left: size(24);
+    padding-right: size(24);
+    padding-bottom: size(96);
+    background-color: $color-background;
+
+    &__container {
+
+      margin: auto;
+    }
+
+    &__label {
+      font-size: text-size(18);
+      line-height: 1.4;
+      text-align: center;
+      font-family: $font-family-english;
+      font-weight: $font-bold;
+      letter-spacing: 0;
+      color: $color-main-green;
+    }
+
+    &__list {
+      display: grid;
+      gap: size(28);
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: size(72);
+    }
+  }
+}
+
+@mixin md {
+
+    .pg-index-media {
+      padding-top: size(48);
+      padding-bottom: size(104);
+
+      &__container {
+        width: size(1000);
+        margin: auto;
+      }
+
+      &__label {
+        font-size: text-size(20);
+
+        text-align: left;
+        margin-bottom: size(16);
+      }
+
+      &__list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: size(30);
+      }
+    }
+}
+
+@mixin xl {
+
+    .pg-index-media {
+
+      padding-top: size(48);
+      padding-bottom: size(104);
+
+      &__container {
+        width: size(1200);
+        margin: auto;
+      }
+
+      &__label {
+        font-size: text-size(20);
+
+        text-align: left;
+        margin-bottom: size(16);
+      }
+
+      &__list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: size(30);
+      }
+    }
+}

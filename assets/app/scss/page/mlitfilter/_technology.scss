@@ -1,0 +1,63 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+
+@mixin base {
+
+  .pg-mlitfilter-technology {
+    min-height: size(250);
+    padding-top: size(46);
+    padding-bottom: size(60);
+    background-image: url("~/images/mlitfilter/technology_background_sp.jpg");
+    background-position: center;
+    background-size: auto 100%;
+
+    &__container {
+
+      margin-top: size(20);
+    }
+
+    &__text {
+      font-family: $font-family-japanese;
+      font-weight: $font-medium;
+      font-size: text-size(12);
+      line-height: 2;
+      margin: size(28) 0 0;
+    }
+  }
+}
+
+@mixin md {
+
+    .pg-mlitfilter-technology {
+      min-height: auto;
+      padding-top: size(82);
+      padding-bottom: size(140);
+      background-image: url("~/images/mlitfilter/technology_background_pc.jpg");
+      background-size: 100% auto;
+
+      &__text {
+        font-size: text-size(18);
+        line-height: 2;
+        margin-top: size(58);
+      }
+    }
+}
+
+@mixin xl {
+
+    .pg-mlitfilter-technology {
+      min-height: auto;
+      padding-top: size(82);
+      padding-bottom: size(140);
+      background-image: url("~/images/mlitfilter/technology_background_pc.jpg");
+      background-size: 100% auto;
+
+      &__text {
+        font-size: text-size(18);
+        line-height: 2;
+        margin-top: size(58);
+      }
+    }
+}

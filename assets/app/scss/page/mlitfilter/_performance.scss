@@ -1,0 +1,176 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+
+@mixin base {
+
+  .pg-mlitfilter-performance {
+    min-height: size(760);
+    padding-block: size(94) size(64);
+    overflow: hidden;
+
+    &__container {
+
+      margin: auto;
+    }
+
+    &__badge {
+      font-family: $font-family-japanese;
+      font-size: text-size(16);
+      line-height: 1.5;
+      display: inline-block;
+      padding: size(8) size(32);
+      margin: size(48) 0 0;
+      border: 1px solid $color-white;
+    }
+
+    &__badge-number {
+      font-family: $font-family-english;
+      font-size: text-size(24);
+      font-weight: $font-medium;
+    }
+
+    &__lead {
+      font-size: text-size(18);
+      line-height: 1.9;
+      margin: size(38) 0 0;
+      font-weight: $font-medium;
+    }
+    &__text {
+        font-size: text-size(18);
+        font-weight: $font-medium;
+        font-family: $font-family-japanese;
+      }
+
+    &__visual {
+      position: relative;
+      margin: size(88) auto 0;
+      overflow: hidden;
+      background-color: $color-black;
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+      min-width: size(900);
+      height: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__metrics {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      display: grid;
+      gap: size(34);
+      min-width: size(170);
+      color: $color-white;
+      transform: translate(-50%, -50%);
+    }
+
+    &__metric {
+      margin: 0;
+      text-align: center;
+    }
+
+    &__metric-label {
+      font-size: text-size(11);
+      line-height: 1.4;
+      display: block;
+      color: $color-white;
+    }
+
+
+    &__metric-value {
+      font-size: text-size(35);
+      line-height: 1;
+      display: inline-block;
+      margin-top: size(4);
+    }
+
+    &__metric-unit {
+      font-size: text-size(13);
+      line-height: 1;
+      display: inline-block;
+      margin-left: size(4);
+      color: $color-white;
+    }
+  }
+}
+
+@mixin md {
+
+    .pg-mlitfilter-performance {
+      min-height: size(980);
+      padding-block: size(148) size(84);
+
+      &__visual {
+        margin-top: size(50);
+      }
+
+      &__image {
+        min-width: size(1280);
+        transform: none;
+      }
+
+      &__metrics {
+        gap: size(52);
+        min-width: size(230);
+      }
+
+      &__metric-label {
+        font-size: text-size(13);
+        line-height: 1.4;
+      }
+
+      &__metric-value {
+        font-size: text-size(48);
+        line-height: 1;
+      }
+
+      &__metric-unit {
+        font-size: text-size(15);
+        line-height: 1;
+      }
+    }
+}
+
+@mixin xl {
+
+    .pg-mlitfilter-performance {
+      min-height: size(980);
+      padding-block: size(148) size(84);
+
+      &__visual {
+        margin-top: size(50);
+      }
+
+      &__image {
+        min-width: size(1280);
+        transform: none;
+      }
+
+      &__metrics {
+        gap: size(52);
+        min-width: size(230);
+      }
+
+      &__metric-label {
+        font-size: text-size(13);
+        line-height: 1.4;
+      }
+
+      &__metric-value {
+        font-size: text-size(48);
+        line-height: 1;
+      }
+
+      &__metric-unit {
+        font-size: text-size(15);
+        line-height: 1;
+      }
+    }
+}

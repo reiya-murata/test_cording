@@ -1,0 +1,193 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+
+@mixin base {
+
+  .pg-index-hero {
+    position: relative;
+    display: grid;
+    place-items: start center;
+    min-height: size(560);
+    padding-top: size(54);
+    color: $color-white;
+    text-align: center;
+    background-color: $color-black;
+    background-image: url("~/images/mlitfilter/top_mlitfilter_hero_sp.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+
+    &__content {
+      position: relative;
+      z-index: 1;
+      padding-inline: size(24);
+    }
+
+    .c-headings-section {
+      color: $color-white;
+
+      &__label {
+        font-size: text-size(32);
+        line-height: 1.35;
+        margin: size(40) 0 0;
+        font-family: $font-family-english;
+        font-weight: $font-bold;
+        letter-spacing: 0;
+        color: $color-main-green;
+      }
+
+      &__title {
+        font-size: text-size(32);
+        line-height: 1.25;
+        margin-top: size(40);
+        color: $color-white;
+        font-weight: $font-bold;
+      }
+
+      &__lead {
+        font-size: text-size(12);
+        line-height: 1.6;
+        margin-top: size(40);
+        color: $color-white;
+      }
+
+      &__link {
+        justify-content: center;
+        margin-top: size(30);
+        color: $color-white;
+      }
+    }
+
+    &__label {
+      font-size: text-size(32);
+      line-height: 1.35;
+      margin-top: size(40);
+      font-family: $font-family-english;
+      font-weight: $font-bold;
+      letter-spacing: 0;
+      color: $color-main-green;
+    }
+
+    &__title {
+      font-size: text-size(32);
+      line-height: 1.25;
+      margin-top: size(40);
+    }
+
+    &__lead {
+      font-size: text-size(12);
+      line-height: 1.6;
+      margin-top: size(40);
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: center;
+      margin-top: size(30);
+    }
+  }
+}
+
+@mixin md {
+
+    .pg-index-hero {
+      min-height: size(860);
+      padding-top: size(82);
+      background-image: url("~/images/mlitfilter/top_mlitfilter_hero_pc.jpg");
+
+      &__label {
+        font-size: text-size(32);
+        line-height: 1.35;
+        margin: 0;
+      }
+
+      .c-headings-section {
+        &__label {
+          font-size: text-size(32);
+          line-height: 1.35;
+          margin: 0;
+        }
+
+        &__title {
+          font-size: text-size(64);
+          margin-top: size(32);
+        }
+
+        &__lead {
+          font-size: text-size(24);
+          margin-top: size(8);
+        }
+
+        &__link {
+          margin-top: size(26);
+        }
+      }
+
+      &__title {
+        font-size: text-size(64);
+        margin-top: size(32);
+      }
+
+      &__lead {
+        font-size: text-size(24);
+        margin-top: size(8);
+      }
+
+      &__actions {
+        margin-top: size(26);
+      }
+    }
+}
+
+@mixin xl {
+
+    .pg-index-hero {
+      min-height: size(860);
+      padding-top: size(82);
+      background-image: url("~/images/mlitfilter/top_mlitfilter_hero_pc.jpg");
+
+      &__label {
+        font-size: text-size(32);
+        line-height: 1.35;
+        margin: 0;
+      }
+
+      .c-headings-section {
+        &__label {
+          font-size: text-size(32);
+          line-height: 1.35;
+          margin: 0;
+        }
+
+        &__title {
+          font-size: text-size(64);
+          margin-top: size(32);
+        }
+
+        &__lead {
+          font-size: text-size(24);
+          margin-top: size(8);
+        }
+
+        &__link {
+          margin-top: size(26);
+        }
+      }
+
+      &__title {
+        font-size: text-size(64);
+        margin-top: size(32);
+      }
+
+      &__lead {
+        font-size: text-size(24);
+        margin-top: size(8);
+      }
+
+      &__actions {
+        margin-top: size(26);
+      }
+    }
+}

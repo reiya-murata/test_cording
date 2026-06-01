@@ -1,0 +1,19 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+
+@mixin base {
+
+  .pg-mlitfilter-performance,
+  .pg-mlitfilter-air-quantity,
+  .pg-mlitfilter-technology {
+    color: $color-white;
+    text-align: center;
+    background-color: $color-black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+  }
+}

@@ -1,0 +1,49 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+
+@mixin base {
+
+  .pg-mlitfilter-material {
+    background-color: $color-white;
+
+    &__container {
+      margin-inline: auto;
+    }
+
+    &__image {
+      min-height: size(260);
+      background-image: url("~/images/mlitfilter/material_diagram_pc.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: min(90%, #{size(560)}) auto;
+    }
+  }
+}
+
+@mixin md {
+
+    .pg-mlitfilter-material {
+      padding-top: size(70);
+
+      &__image {
+        padding-top: size(40);
+        min-height: size(600);
+        background-size: 63%;
+      }
+    }
+}
+
+@mixin xl {
+
+    .pg-mlitfilter-material {
+      padding-top: size(70);
+
+      &__image {
+        padding-top: size(40);
+        min-height: size(600);
+        background-size: 63%;
+      }
+    }
+}

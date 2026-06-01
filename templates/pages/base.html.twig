@@ -36,8 +36,8 @@
   {% endblock %}
 </head>
 <body{% if _page is defined %} id="{{ _page }}"{% endif %}>
-{% include 'layout/header.html.twig' with {} only %}
+{% include 'layout/_header.html.twig' with {} only %}
 {% block body %}{% endblock %}
-{% include 'layout/footer.html.twig' with {} only %}
+{% include 'layout/_footer.html.twig' with {} only %}
 </body>
 </html>

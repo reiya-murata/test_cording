@@ -1,0 +1,154 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+
+@mixin base {
+
+  .pg-mlitfilter-hero {
+    min-height: 100%;
+    padding: size(20);
+    text-align: center;
+    background-color: $color-white;
+
+    &__container {
+
+      margin: auto;
+    }
+
+    &__logo {
+      display: inline-block;
+      margin: size(28) 0 size(20);
+    }
+
+    &__logo-image {
+      display: block;
+      width: size(160);
+      height: auto;
+    }
+
+    &__title {
+      font-size: text-size(34);
+      line-height: 1.25;
+      margin: 0;
+      color: $color-text-main;
+    }
+
+    &__label {
+      font-family: $font-family-english;
+      font-weight: $font-semibold;
+      letter-spacing: 0.05em;
+      font-size: text-size(20);
+      line-height: 1.35;
+      margin: size(12) 0 0;
+      color: $color-main-green;
+    }
+
+    &__lead {
+      font-size: text-size(13);
+      line-height: 1.9;
+      margin: size(28) 0 0;
+      font-weight: $font-medium;
+      color: $color-text-main;
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: center;
+      margin-top: size(40);
+    }
+
+    &__image {
+      display: block;
+      width: min(100%, #{size(420)});
+      height: auto;
+      margin: size(36) auto 0;
+    }
+  }
+}
+
+@mixin md {
+
+    .pg-mlitfilter-hero {
+      min-height: 100%;
+      padding-top: size(22);
+      padding-bottom: size(40);
+
+      margin: auto;
+
+      &__logo {
+        margin: size(40) 0 size(20);
+      }
+
+      &__title {
+        font-size: text-size(64);
+        line-height: 1.18;
+      }
+
+      &__label {
+        font-size: text-size(30);
+        line-height: 1.35;
+      }
+
+      &__lead {
+        font-size: text-size(18);
+        line-height: 2;
+        margin-top: size(16);
+      }
+
+      &__logo-image {
+        width: size(300);
+      }
+
+      &__actions {
+      }
+
+      &__image {
+        width: min(100%, size(650));
+        margin-top: size(0);
+      }
+    }
+}
+
+@mixin xl {
+
+    .pg-mlitfilter-hero {
+      min-height: 100%;
+      padding-top: size(22);
+      padding-bottom: size(40);
+
+      margin: auto;
+
+      &__logo {
+        margin: size(40) 0 size(20);
+      }
+
+      &__title {
+        font-size: text-size(64);
+        line-height: 1.18;
+      }
+
+      &__label {
+        font-size: text-size(30);
+        line-height: 1.35;
+      }
+
+      &__lead {
+        font-size: text-size(18);
+        line-height: 2;
+        margin-top: size(16);
+      }
+
+      &__logo-image {
+        width: size(300);
+      }
+
+      &__actions {
+      }
+
+      &__image {
+        width: min(100%, size(650));
+        margin-top: size(0);
+      }
+    }
+}

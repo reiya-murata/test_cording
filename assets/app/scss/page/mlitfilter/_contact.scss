@@ -1,0 +1,13 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+
+@mixin base {
+
+  .pg-mlitfilter-contact {
+    padding-top: size(124);
+    padding-bottom: size(146);
+    background-color: $color-white;
+  }
+}

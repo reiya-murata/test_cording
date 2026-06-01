@@ -1,0 +1,48 @@
+@forward "root" as root-*;
+@forward "base" as base-*;
+@forward "hero" as hero-*;
+@forward "cling-air" as cling_air-*;
+@forward "products" as products-*;
+@forward "news" as news-*;
+@forward "media" as media-*;
+
+@use "root";
+@use "base";
+@use "hero";
+@use "cling-air";
+@use "products";
+@use "news";
+@use "media";
+@use "../../global/mixins" as *;
+
+#index {
+  @include root.root;
+  @include base.base;
+  @include hero.base;
+  @include cling-air.base;
+  @include products.base;
+  @include news.base;
+  @include media.base;
+}
+
+@include md {
+  #index {
+    @include base.md;
+    @include hero.md;
+    @include cling-air.md;
+    @include products.md;
+    @include media.md;
+    @include news.md;
+  }
+}
+
+@include xl {
+  #index {
+    @include base.xl;
+    @include hero.xl;
+    @include cling-air.xl;
+    @include products.xl;
+    @include media.xl;
+    @include news.xl;
+  }
+}
