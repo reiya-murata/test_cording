@@ -2,37 +2,20 @@
 @use "../../global/variables" as *;
 @use "../../global/mixins" as *;
 @use "../../object/utility/contents_style" as *;
-
-@mixin base {
-
+#index {
   .pg-index-products {
     background-color: $color-white;
+
+    @include md {
+      padding-top: size(44);
+    }
 
     &__list {
       display: grid;
       gap: size(20);
+      @include md {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
   }
-}
-
-@mixin md {
-
-    .pg-index-products {
-      padding-top: size(44);
-
-      &__list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-}
-
-@mixin xl {
-
-    .pg-index-products {
-      padding-top: size(44);
-
-      &__list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
 }

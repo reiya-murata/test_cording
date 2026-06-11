@@ -97,7 +97,13 @@
     font-size: text-size(16);
     line-height: 1.6;
     margin: 0 0 size(12);
+    color: $color-topback-button;
+    font-weight: $font-medium;
+  }
+
+  &__contact &__heading {
     color: $color-white;
+    font-weight: $font-bold;
   }
 
   &__link,
@@ -114,6 +120,7 @@
   &__mail {
     display: flex;
     margin-top: size(24);
+    font-weight: $font-medium;
   }
 
   &__mail::after {
@@ -132,6 +139,7 @@
     display: inline-flex;
     align-items: center;
     font-size: text-size(18);
+    font-weight: $font-medium;
     gap: size(8);
   }
 

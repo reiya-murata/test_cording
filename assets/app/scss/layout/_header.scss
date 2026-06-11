@@ -125,7 +125,7 @@
     display: block;
     padding: size(16) size(16);
     font-family: $font-family-japanese;
-    font-weight: $font-bold;
+    font-weight: $font-medium;
     letter-spacing: 0;
     color: rgba($color-white, 0.78);
     text-decoration: none;
@@ -156,7 +156,8 @@
     display: inline-flex;
     gap: size(8);
     min-height: size(56);
-    background-color: rgba($color-white, 0.08);
+    background-color: $color-header-footer;
+    text-decoration: underline;
   }
 
   &__language-icon {

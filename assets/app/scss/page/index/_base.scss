@@ -2,22 +2,11 @@
 @use "../../global/variables" as *;
 @use "../../global/mixins" as *;
 @use "../../object/utility/contents_style" as *;
-
-@mixin base {
-
+#index {
   .pg-index {
     padding-top: size(58);
+    @include md {
+      padding-top: size(64);
+    }
   }
-}
-
-@mixin md {
-    .pg-index {
-      padding-top: size(64);
-    }
-}
-
-@mixin xl {
-    .pg-index {
-      padding-top: size(64);
-    }
 }

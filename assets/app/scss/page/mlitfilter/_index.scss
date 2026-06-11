@@ -1,64 +1,10 @@
-@forward "root" as root-*;
-@forward "base" as base-*;
-@forward "navigation" as navigation-*;
-@forward "hero" as hero-*;
-@forward "feature-common" as feature_common-*;
-@forward "performance" as performance-*;
-@forward "air-quantity" as air_quantity-*;
-@forward "technology" as technology-*;
-@forward "material" as material-*;
-@forward "story" as story-*;
-@forward "contact" as contact-*;
-
-@use "root";
-@use "base";
-@use "navigation";
-@use "hero";
-@use "feature-common";
-@use "performance";
-@use "air-quantity";
-@use "technology";
-@use "material";
-@use "story";
-@use "contact";
-@use "../../global/mixins" as *;
-
-#mlitfilter {
-  @include root.root;
-  @include base.base;
-  @include navigation.base;
-  @include hero.base;
-  @include feature-common.base;
-  @include performance.base;
-  @include air-quantity.base;
-  @include technology.base;
-  @include material.base;
-  @include story.base;
-  @include contact.base;
-}
-
-@include md {
-  #mlitfilter {
-    @include base.md;
-    @include navigation.md;
-    @include hero.md;
-    @include performance.md;
-    @include air-quantity.md;
-    @include technology.md;
-    @include material.md;
-    @include story.md;
-  }
-}
-
-@include xl {
-  #mlitfilter {
-    @include base.xl;
-    @include navigation.xl;
-    @include hero.xl;
-    @include performance.xl;
-    @include air-quantity.xl;
-    @include technology.xl;
-    @include material.xl;
-    @include story.xl;
-  }
-}
+@forward "root";
+@forward "base";
+@forward "index_navigation";
+@forward "index_hero";
+@forward "index_performance";
+@forward "index_air_quantity";
+@forward "index_technology";
+@forward "index_material";
+@forward "index_story";
+@forward "index_contact";

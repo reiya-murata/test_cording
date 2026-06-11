@@ -2,9 +2,7 @@
 @use "../../global/variables" as *;
 @use "../../global/mixins" as *;
 @use "../../object/utility/contents_style" as *;
-
-@mixin base {
-
+#mlitfilter {
   .pg-mlitfilter-contact {
     padding-top: size(124);
     padding-bottom: size(146);

@@ -44,6 +44,8 @@
   &__date {
     font-size: text-size(13);
     line-height: 1.4;
+    font-family: $font-family-english;
+    font-weight: $font-bold;
     color: $color-category-gray;
   }
 
@@ -52,6 +54,7 @@
     line-height: 1.4;
     width: fit-content;
     padding: size(4) size(10);
+    font-weight: $font-medium;
     color: $color-white;
     background-color: $color-category-gray;
     border-radius: size(999);
@@ -61,6 +64,7 @@
     font-size: text-size(16);
     line-height: 1.7;
     margin: 0;
+    font-weight: $font-medium;
   }
 }
 

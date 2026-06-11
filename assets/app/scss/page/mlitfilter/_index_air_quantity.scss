@@ -1,0 +1,212 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+#mlitfilter {
+  .pg-mlitfilter-air-quantity {
+    color: $color-white;
+    text-align: center;
+    background-color: $color-black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: size(850);
+    padding-top: size(88);
+    padding-bottom: size(56);
+    background-image: url("~/images/mlitfilter/air_quantity_background_sp.jpg");
+    background-position: 62% top;
+
+    @include md {
+      min-height: auto;
+      padding-top: size(180);
+      padding-bottom: size(140);
+      background-image: url("~/images/mlitfilter/air_quantity_background_pc.jpg");
+      background-position: center top;
+      background-size: 100% auto;
+      position: relative;
+    }
+
+    &__container {
+      margin: auto;
+    }
+
+    &__badge {
+      font-size: text-size(18);
+      font-weight: $font-medium;
+      line-height: 1.5;
+      display: inline-block;
+      padding: size(8) size(24);
+      margin: size(42) 0 0;
+      border: 1px solid $color-white;
+      @include md {
+        margin-top: size(52);
+      }
+    }
+
+    &__text {
+      font-size: text-size(12);
+      line-height: 1.9;
+      margin-top: size(28);
+      font-weight: $font-medium;
+      @include md {
+        font-size: text-size(20);
+      }
+    }
+
+    &__values {
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      gap: size(18);
+      grid-column: 1 / -1;
+      order: -1;
+      min-width: 0;
+      margin-top: size(24);
+      @include md {
+        grid-column: auto;
+        order: 0;
+        gap: size(32);
+        width: size(292);
+        margin-top: 0;
+      }
+    }
+
+    &__value {
+      font-size: text-size(16);
+      line-height: 1.45;
+      display: grid;
+      justify-items: center;
+      gap: size(0);
+      margin: 0;
+      @include md {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: size(16);
+      }
+    }
+
+    &__name {
+      font-size: text-size(16);
+      color: $color-white;
+      @include md {
+        padding-bottom: size(7);
+        text-align: right;
+      }
+    }
+
+    &__amount {
+      display: inline-flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: size(4);
+      @include md {
+        justify-content: flex-start;
+      }
+    }
+
+    &__number {
+      font-size: text-size(36);
+      font-family: $font-family-english;
+      font-weight: $font-semibold;
+      line-height: 1;
+      color: $color-white;
+      @include md {
+        font-size: text-size(60);
+      }
+    }
+
+    &__unit {
+      padding-bottom: size(5);
+      color: $color-white;
+      text-align: left;
+      @include md {
+        font-size: text-size(16);
+        line-height: 1;
+        padding-bottom: size(7);
+      }
+    }
+
+    &__note {
+      font-size: text-size(18);
+      line-height: 1.6;
+      margin: 0;
+      color: $color-white;
+      font-weight: $font-medium;
+      @include md {
+        margin-top: size(24);
+      }
+    }
+
+    &__meter-list {
+      display: grid;
+      grid-template-columns: repeat(2, size(92));
+      justify-content: center;
+      align-items: flex-end;
+      gap: size(12);
+      margin-top: size(76);
+      @include md {
+        position: relative;
+        grid-template-columns: size(292);
+        margin-top: size(108);
+        min-height: size(244);
+      }
+    }
+
+    &__meter {
+      margin: 0;
+      @include md {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    &__meter--genuine,
+    &__meter--mlitfilter {
+      min-width: 0;
+    }
+
+    &__meter-image {
+      display: block;
+      width: size(92);
+      height: auto;
+      margin-inline: auto;
+      @include md {
+        width: size(300);
+      }
+    }
+
+    &__caption {
+      font-size: text-size(13);
+      line-height: 1.5;
+      margin-top: size(10);
+      color: $color-white;
+    }
+
+    &__meter--genuine {
+      @include md {
+        position: absolute;
+        left: calc(50% - size(230));
+        top: calc(50% - size(100));
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__meter--mlitfilter {
+      @include md {
+        position: absolute;
+        left: calc(50% + size(230));
+        top: calc(50% - size(100));
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__name--english {
+      @include md {
+        font-size: text-size(20);
+        line-height: 1.55;
+        margin: 0 auto;
+      }
+    }
+  }
+}

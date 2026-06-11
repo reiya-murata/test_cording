@@ -1,0 +1,170 @@
+@use "../../global/functions" as *;
+@use "../../global/variables" as *;
+@use "../../global/mixins" as *;
+@use "../../object/utility/contents_style" as *;
+#index {
+  .pg-index-cling-air {
+    background-color: $color-background;
+
+    @include md {
+      padding-bottom: size(340);
+    }
+
+    &__container {
+      margin: auto;
+      display: grid;
+      gap: size(34);
+      @include md {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      @include md {
+        position: absolute;
+        padding-top: size(96);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .c-headings-section {
+      &__label {
+        font-size: text-size(28);
+        line-height: 1.35;
+        margin: size(40) 0 0;
+        font-family: $font-family-english;
+        font-weight: $font-semibold;
+        letter-spacing: 0;
+        color: $color-main-green;
+        @include md {
+          font-size: text-size(32);
+          margin: 0;
+        }
+      }
+
+      &__title {
+        font-size: text-size(24);
+        line-height: 1.25;
+        margin-top: size(40);
+        font-weight: $font-bold;
+        font-family: $font-family-japanese;
+        @include md {
+          font-size: text-size(64);
+          margin-top: size(30);
+        }
+      }
+
+      &__lead {
+        font-size: text-size(14);
+        line-height: 1.7;
+        margin-top: size(40);
+        font-weight: $font-bold;
+        color: $color-text-main;
+        @include md {
+          font-size: text-size(24);
+          margin-top: size(8);
+        }
+      }
+
+      &__link {
+        margin-top: size(20);
+        color: $color-text-main;
+        @include md {
+          margin-top: size(32);
+        }
+      }
+    }
+
+    &__label {
+      font-size: text-size(28);
+      line-height: 1.35;
+      margin-top: size(40);
+      font-family: $font-family-english;
+      font-weight: $font-semibold;
+      letter-spacing: 0;
+      color: $color-main-green;
+      @include md {
+        font-size: text-size(32);
+        margin: 0;
+      }
+    }
+
+    &__title {
+      font-size: text-size(24);
+      line-height: 1.25;
+      margin-top: size(40);
+      font-weight: $font-bold;
+      @include xl {
+        font-size: text-size(64);
+        margin-top: size(30);
+      }
+    }
+
+    &__lead {
+      font-size: text-size(14);
+      line-height: 1.7;
+      margin-top: size(40);
+      margin-bottom: size(20);
+      font-weight: $font-bold;
+      @include md {
+        font-size: text-size(24);
+        margin-top: size(8);
+        margin-bottom: size(32);
+      }
+    }
+
+    &__visual {
+      position: relative;
+      min-height: size(360);
+      @include md {
+        min-height: size(526);
+      }
+    }
+
+    &__seat-image {
+      display: block;
+      height: auto;
+      position: absolute;
+      left: calc(50% - size(20));
+      top: calc(50% - size(120));
+      transform: translate(-50% -50%);
+      width: size(200);
+      z-index: 2;
+      @include md {
+        left: calc(50% + size(100));
+        top: calc(50% + size(180));
+        width: size(210);
+      }
+      @include xl {
+        left: calc(50% + size(200));
+        top: calc(50% - size(60));
+        width: size(510);
+      }
+    }
+
+    &__cushion-image {
+      display: block;
+      height: auto;
+      position: absolute;
+      left: calc(50% - size(180));
+      top: calc(50% + size(0));
+      transform: translate(-50% -50%);
+      width: size(200);
+      @include md {
+        overflow: hidden;
+        left: calc(50% - size(280));
+        top: calc(50% + size(200));
+        width: size(360);
+        z-index: 1;
+      }
+      @include xl {
+        top: calc(50% + size(120));
+        width: size(560);
+      }
+    }
+  }
+}

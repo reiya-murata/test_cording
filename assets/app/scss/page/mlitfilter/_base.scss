@@ -2,24 +2,11 @@
 @use "../../global/variables" as *;
 @use "../../global/mixins" as *;
 @use "../../object/utility/contents_style" as *;
-
-@mixin base {
-
+#mlitfilter {
   .pg-mlitfilter {
     padding-top: size(58);
+    @include md {
+      padding-top: size(64);
+    }
   }
-}
-
-@mixin md {
-    .pg-mlitfilter {
-      padding-top: size(64);
-
-    }
-}
-
-@mixin xl {
-    .pg-mlitfilter {
-      padding-top: size(64);
-
-    }
 }

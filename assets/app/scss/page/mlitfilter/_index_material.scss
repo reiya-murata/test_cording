@@ -2,11 +2,13 @@
 @use "../../global/variables" as *;
 @use "../../global/mixins" as *;
 @use "../../object/utility/contents_style" as *;
-
-@mixin base {
-
+#mlitfilter {
   .pg-mlitfilter-material {
     background-color: $color-white;
+
+    @include md {
+      padding-top: size(70);
+    }
 
     &__container {
       margin-inline: auto;
@@ -18,32 +20,11 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: min(90%, #{size(560)}) auto;
+      @include md {
+        padding-top: size(40);
+        min-height: size(600);
+        background-size: 63%;
+      }
     }
   }
-}
-
-@mixin md {
-
-    .pg-mlitfilter-material {
-      padding-top: size(70);
-
-      &__image {
-        padding-top: size(40);
-        min-height: size(600);
-        background-size: 63%;
-      }
-    }
-}
-
-@mixin xl {
-
-    .pg-mlitfilter-material {
-      padding-top: size(70);
-
-      &__image {
-        padding-top: size(40);
-        min-height: size(600);
-        background-size: 63%;
-      }
-    }
 }
